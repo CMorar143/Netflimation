@@ -1,0 +1,165 @@
+* 
+{
+	box-sizing: border-box;
+}
+
+body
+{
+	font-family: Arial;
+	margin: 1.5em 5em 0 5em;
+	padding: 2em;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.main
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.login_section
+{
+	width: 100%;  
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background: #fff; 
+}
+
+.login_section form
+{
+	min-width: 250px;
+	margin-top: -10em;
+}
+
+.validation
+{
+	width: 100%;
+	font-size: 0.75em;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 0.8em;
+	border: none;
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+
+.login_input
+{
+	width: 100%;
+	position: relative;
+}
+
+.field
+{
+	width: 100%;
+	padding: 0.8em 0 0.5em 0.5em;
+	border: 3px solid #ccc;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+	border-radius: 4px;
+}
+
+.field:first-child
+{
+	margin-top: 0.2em;
+	margin-bottom: 0.3em;
+}
+
+.field:focus 
+{
+	border: 3px solid #555;
+}
+
+.login_title
+{
+	font-weight: bold;
+	display: block;
+	font-size: 2em;
+	line-height: 1.2;
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.login_logo
+{
+	display: block;
+	width: 9em;
+	height: 9em;
+	margin: 0 auto;
+	margin-bottom: 1.5em;
+}
+
+.login_logo img
+{
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+.button 
+{
+	vertical-align: middle;
+	display: inline-block;
+	border-radius: 4px;
+	background-color: #d4192c;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1.5em;
+	padding: 0.5em;
+	width: 100%;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin-top: 0.6em;
+}
+
+.button span 
+{
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after 
+{
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span 
+{
+	padding-right: 25px;
+}
+
+.button:hover span:after
+{
+	opacity: 1;
+	right: 0;
+}
+
+.main:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
