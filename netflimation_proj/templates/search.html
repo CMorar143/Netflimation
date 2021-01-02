@@ -11,6 +11,17 @@
 		<div class="main">
 			This is search
 			<a href="{% url 'account_logout' %}">Logout</a>
+			<form method="post">
+				{% csrf_token %}
+				<div class="login_input">
+					<input class="field" id="{{ search.search_input.id_for_label }}" name="{{ search.search_input.html_name }}" type="text" /> 
+				</div>
+				<button class="button" type="submit"><span>Search </span></button>
+			</form>
+
+			{% if results %}
+				youve searched {{ results }}
+			{% endif %}
 		</div>
 	</body>
 </html>

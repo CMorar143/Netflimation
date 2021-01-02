@@ -23,6 +23,17 @@ class search(TemplateView):
 	template_name = "search.html"
 
 	def get(self, request):
-		
+		search = Search()
+		return render(request, self.template_name, {'search': search, 'results': None})
 
-		return render(request, self.template_name)
+	def post(self, request):
+		search = Search(request.POST)
+
+		if search.is_valid():
+			title = search.cleaned_data['search_input']
+			print(title)
+			return render(request, self.template_name, {'search': search, 'results': title})
+
+		else:
+			print("not valid")
+			return render(request, self.template_name, {'search': search, 'results': None})
